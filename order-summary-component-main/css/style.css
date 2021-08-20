@@ -1,0 +1,208 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--pale-blue);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+p {
+    font-weight: 500;
+    color: var(--desaturated-blue);
+    text-align: center;
+    margin: 1.2rem 0;
+    line-height: 1.5rem;
+}
+
+#music-icon,
+#annual-plan,
+#price,
+#change-plan {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+#payment-btn,
+#cancel-btn {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 95%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 300px;
+    overflow: hidden;
+    background-color: white;
+    max-width: 28.12rem;
+    height: 43.75rem;
+    border-radius: 15px;
+}
+
+.header-img {
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.content-app {
+    margin: 2.8rem 3.12rem;
+}
+
+.plan-box {
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    position: relative;
+    width: 21.87rem;
+    height: 5.93rem;
+}
+
+.music-icon {
+    left: 1.37rem;
+    top: 1.56rem;
+}
+
+.annual-plan {
+    left: 5.75rem;
+    top: 1.56rem;
+    font-weight: 700;
+}
+
+.price {
+    left: 5.75rem;
+    bottom: 0.06rem;
+}
+
+.change-plan {
+    color: var(--bright-blue);
+    top: 2.37rem;
+    right: 1.68rem;
+    font-weight: 700;
+    font-size: 90%;
+}
+
+.change-plan:hover {
+    opacity: 80%;
+    text-decoration: none;
+}
+
+.end-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 3.12rem;
+}
+
+.payment-btn {
+    width: 21.87rem;
+    height: 3.12rem;
+    position: relative;
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    color: white;
+    top: 1.87rem;
+    box-shadow: 0 5px 10px var(--desaturated-blue);
+}
+
+.cancel-btn {
+    width: 21.87rem;
+    height: 3.12rem;
+    color: var(--desaturated-blue);
+    position: relative;
+    top: 2.81rem;
+}
+
+.payment-btn:hover {
+    opacity: 70%;
+}
+
+.cancel-btn:hover {
+    color: var(--dark-blue);
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-size: 100%;
+        max-width: 100%;
+        font-size: 90%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 97%;
+    }
+    .container {
+        max-width: 20.62rem;
+        max-height: 35.62rem;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+    .plan-box {
+        width: 16.87rem;
+        height: 5rem;
+        margin: auto;
+    }
+    .music-icon {
+        left: 0.8rem;
+        top: 1rem;
+    }
+    .annual-plan {
+        left: 4.7rem;
+        top: 1.2rem;
+    }
+    .price {
+        left: 4.7rem;
+        top: 1.2rem;
+    }
+    .change-plan {
+        top: 2rem;
+        right: 1.2rem;
+    }
+    .payment-btn {
+        width: 17.5rem;
+        height: 3.12rem;
+        margin: auto;
+    }
+    .cancel-btn {
+        width: 17.5rem;
+        height: 3.12rem;
+        margin: auto;
+    }
+}
